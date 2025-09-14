@@ -1,0 +1,82 @@
+video {
+    object-fit: cover; /*comme background-size:cover*/
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -5;
+}
+
+.hero-container {
+    /* background: url('../../public/images/img-home.jpg') center center / cover no-repeat; shorthand */
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.2);
+    text-align: center;
+    object-fit: contain;
+    position: relative;
+}
+.hero-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: -4;
+}
+
+.hero-container > h1 {
+    color: #FFF;
+    font-size: 6.25rem;
+    margin-top: 100px;
+}
+
+.hero-container > p {
+    color: #FFF;
+    margin-top: 8px;
+    font-size: 2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.hero-btns {
+    margin-top: 2rem;
+}
+
+.hero-btns .btn {
+    margin: 6px;
+}
+
+.fa-play-circle {
+    margin-left: 4px;
+}
+
+@media screen and (max-width: 960px) {
+    .hero-container > h1 {
+        font-size: 4.25rem;
+        margin-top: -150px;
+    }
+    .hero-container > p {
+        font-size: 1.75rem;
+    }
+}
+@media screen and (max-width: 768px) {
+    .hero-container > h1 {
+        font-size: 3.125rem;
+        margin-top: -100px;
+    }
+    .hero-container > p {
+        font-size: 1.4rem;
+    }
+    .btn-mobile {
+        display: block;
+        text-decoration: none;
+    }
+    .btn {
+        width: 100%;
+    }
+}
